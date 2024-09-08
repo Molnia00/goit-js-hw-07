@@ -7,11 +7,13 @@ function createBoxes(amount){
   boxes.innerHTML = '';
 
   for (let i = 0; i < amount; i++) {
+    const boxesDiv = [];
     const div = document.createElement('div');
-    div.style.width = `${30 + 10 * i}`;
-    div.style.height = `${30 + 10 * i}`;
+    div.style.width = `${30 + 10 * i}px`;
+    div.style.height = `${30 + 10 * i}px`;
     div.style.backgroundColor = getRandomHexColor();
-    boxes.append(div);
+    boxesDiv.append(div);
+    boxes.append(boxesDiv);
   }
 }
 
@@ -37,15 +39,5 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
-
-
-
-
-
-
-
-
-
 
 
