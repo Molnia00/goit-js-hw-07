@@ -12,7 +12,7 @@ function createBoxes(amount){
     div.style.width = `${30 + 10 * i}px`;
     div.style.height = `${30 + 10 * i}px`;
     div.style.backgroundColor = getRandomHexColor();
-    boxesDiv.append(div);
+    boxesDiv.push(div);
     boxes.append(boxesDiv);
   }
 }
