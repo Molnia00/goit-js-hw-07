@@ -1,22 +1,27 @@
+
+
 const inputNum = document.querySelector('input');
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
 
-function createBoxes(amount){
+function createBoxes(amount) {
   boxes.innerHTML = '';
-
+  const boxesDiv = [];
   for (let i = 0; i < amount; i++) {
-    const boxesDiv = [];
+    
     const div = document.createElement('div');
     div.style.width = `${30 + 10 * i}px`;
     div.style.height = `${30 + 10 * i}px`;
     div.style.backgroundColor = getRandomHexColor();
     boxesDiv.push(div);
-    boxes.append(boxesDiv);
+
   }
+  boxes.append(...boxesDiv);
 }
 
+
+    
 function destroyBoxes() {
   boxes.innerHTML = '';
 }
